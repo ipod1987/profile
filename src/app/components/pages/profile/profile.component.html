@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
+    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="33%" fxFlex.md="100%" class="col">
+
+        <div
+            class="profile-card-box border-radius bg-white box-shadow mb-25"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.card-borderd-theme]="themeService.isCardBorder()"
+            [class.card-border-radius]="themeService.isCardBorderRadius()"
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <div class="bottom">
+                <div class="d-md-flex align-items-end justify-content-space-between">
+                    <div class="profile-box position-relative">
+                        <img src="assets/img/engels-crop.jpg" class="rounded-circle" alt="user">
+                        <h5 class="fw-semibold">Engels Medina</h5>
+                        <span class="d-block gray-color">FullStack Software developer</span>
+                    </div>
+                    <div class="socials">
+                        <a href="#" target="_blank" class="d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-facebook-app-symbol lh-1"></i></a>
+                        <a href="https://twitter.com/Engelsmedina" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-twitter lh-1"></i></a>
+                        <a href="https://www.linkedin.com/in/engels-abdel-medina-colmenares/?locale=en_US" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-linkedin lh-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <app-personal-info></app-personal-info>
+
+        <app-activity-timeline></app-activity-timeline>
+
+    </div>
+    <div fxFlex="67%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="67%" fxFlex.md="100%" class="col">
+
+        <app-stats></app-stats>
+
+        <app-overview></app-overview>
+
+        <app-tasks></app-tasks>
+
+    </div>
+</div>
