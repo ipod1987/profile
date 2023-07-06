@@ -1,4 +1,4 @@
-# Hitme Admin panel
+# Engels Medina - Angular Personal page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
