@@ -50,6 +50,8 @@ web_modules/
 
 # Optional npm cache directory
 .npm
+/*.js
+/*.js.map
 
 # Optional eslint cache
 .eslintcache
