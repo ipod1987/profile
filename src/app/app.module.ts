@@ -419,6 +419,10 @@ import { SaStatsComponent } from './components/dashboard/saas-app/sa-stats/sa-st
 import { SaRevenueSummaryComponent } from './components/dashboard/saas-app/sa-revenue-summary/sa-revenue-summary.component';
 import { SaSalesAnalyticsComponent } from './components/dashboard/saas-app/sa-sales-analytics/sa-sales-analytics.component';
 import { ComingSoonComponent } from './components/pages/coming-soon/coming-soon.component';
+import { HabilitiesReportComponent } from './components/pages/profile/habilities-report/habilities-report.component';
+import { HabilitiesSessionsComponent } from './components/pages/profile/ar-sessions/ar-sessions.component';
+import { AboutMeComponent } from './components/pages/profile/about-me/about-me.component';
+import { CourseExperienceComponent } from './components/pages/profile/course-experience/course-experience.component';
 
 @NgModule({
     declarations: [
@@ -784,6 +788,10 @@ import { ComingSoonComponent } from './components/pages/coming-soon/coming-soon.
         SaRevenueSummaryComponent,
         SaSalesAnalyticsComponent,
         ComingSoonComponent,
+        HabilitiesReportComponent,
+        HabilitiesSessionsComponent,
+        AboutMeComponent,
+        CourseExperienceComponent,
     ],
     imports: [
         BrowserModule,

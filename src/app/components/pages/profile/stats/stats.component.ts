@@ -16,4 +16,8 @@ export class StatsComponent {
         this.themeService.toggleRTLEnabledTheme();
     }
     
+    getExperienceTime(): string{
+        const currentDate = new Date().getFullYear();
+        return currentDate - 2009 + ' Years';
+    }
 }

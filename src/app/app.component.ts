@@ -10,7 +10,7 @@ import { ToggleService } from '../app/components/common/header/toggle.service';
 })
 export class AppComponent {
 
-    title = 'Tagus - Material Design Angular Admin Dashboard Template';
+    title = 'Engels Medina - FullStack Developer';
 
     isToggled = false;
 

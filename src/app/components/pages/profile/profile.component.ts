@@ -60,7 +60,14 @@ export class ProfileComponent {
             }
         };
     }
-
+    linkedIn = 'https://www.linkedin.com/in/engels-abdel-medina-colmenares/?locale=en_US';
+    instagram = 'https://instagram.com/engelsabdel';
+    twitter = 'https://twitter.com/Engelsmedina';
+    name = 'Engels Medina';
+    role = 'FullStack Software developer';
+    longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+    from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+    originally bred for.`;
     toggleTheme() {
         this.themeService.toggleTheme();
     }
@@ -76,5 +83,6 @@ export class ProfileComponent {
     toggleRTLEnabledTheme() {
         this.themeService.toggleRTLEnabledTheme();
     }
-
+    expandedIndex = 0;
+    panelOpenState = false;
 }

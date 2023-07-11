@@ -1,8 +1,9 @@
-<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
-    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="33%" fxFlex.md="100%" class="col">
 
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0" class="mt-15">
+    <div class="flex-grow-1"></div>
+    <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="40%" fxFlex.md="40%" class="col">
         <div
-            class="profile-card-box border-radius bg-white box-shadow mb-25"
+            class="profile-card-box border-radius bg-white box-shadow mb-25 mt-15"
             [class.component-dark-theme]="themeService.isDark()"
             [class.card-borderd-theme]="themeService.isCardBorder()"
             [class.card-border-radius]="themeService.isCardBorderRadius()"
@@ -11,31 +12,123 @@
             <div class="bottom">
                 <div class="d-md-flex align-items-end justify-content-space-between">
                     <div class="profile-box position-relative">
-                        <img src="assets/img/engels-crop.jpg" class="rounded-circle" alt="user">
-                        <h5 class="fw-semibold">Engels Medina</h5>
-                        <span class="d-block gray-color">FullStack Software developer</span>
+                        <img src="assets/img/engels-crop.jpg" class="rounded-circle mb-15" alt="user">
+                        <h5 class="fw-semibold">{{name}}</h5>
+                        <span class="d-block gray-color">{{role}}</span>
                     </div>
                     <div class="socials">
-                        <a href="#" target="_blank" class="d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-facebook-app-symbol lh-1"></i></a>
-                        <a href="https://twitter.com/Engelsmedina" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-twitter lh-1"></i></a>
-                        <a href="https://www.linkedin.com/in/engels-abdel-medina-colmenares/?locale=en_US" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-linkedin lh-1"></i></a>
+                        <a [href]="linkedIn" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-linkedin lh-1"></i></a>
+                        <a [href]="instagram" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-instagram lh-1"></i></a>
+                        <a [href]="twitter" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-twitter lh-1"></i></a>                        
                     </div>
                 </div>
             </div>
+
+            <!-- <mat-card class="mb-25">
+                <mat-card-header class="mb-15">
+                    <mat-card-title-group>
+                        <mat-card-title class="fw-semibold mb-10">Card with media size</mat-card-title>
+                        <mat-card-subtitle>Large</mat-card-subtitle>
+                        <img mat-card-lg-image src="assets/img/engels-crop.jpg" alt="Engels">
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{longText}}</p>
+                </mat-card-content>
+            </mat-card> -->
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </div>
 
-        <app-personal-info></app-personal-info>
-
-        <app-activity-timeline></app-activity-timeline>
-
     </div>
-    <div fxFlex="67%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="67%" fxFlex.md="100%" class="col">
+    <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col" class="mt-15">
 
         <app-stats></app-stats>
+        
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
+    <div class="flex-grow-1"></div>
+    <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col">
 
-        <app-overview></app-overview>
+        <app-about-me></app-about-me>
 
-        <app-tasks></app-tasks>
+        
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Experience</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-accordion class="tagus-advance-expansion">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Freelance Full Stack Software Engineer
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Genium.io
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                What About Money Back Guarantee?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                How Long Does A Business Consulting Project Last?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Do You Offer Volume or Loyalty Discounts?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                In Which Countries Do You Provide Consulting Services?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex="45%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="40%" fxFlex.md="40%" class="col">
+        <app-personal-info></app-personal-info>
+
+        <app-habilities-sessions></app-habilities-sessions>
+
+    </div>
+</div>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
+    <div class="flex-grow-1"></div>
+    <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="40%" fxFlex.md="40%" class="col">
+
+        <app-habilities-report></app-habilities-report>
+        
+    </div>
+    <div fxFlex="45%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col">
+
+        <app-course-experience></app-course-experience>
 
     </div>
 </div>

@@ -1,0 +1,45 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Courses Completion</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="all-projects-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Course</th>
+                        <th class="fw-semibold gray-color">Status</th>
+                        <th class="fw-semibold gray-color">Company</th>
+                        <th class="fw-semibold gray-color">Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let course of myCourses">
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img [src]="course.icon" alt="logoCourse">
+                                </div>
+                                <h5 class="fw-semibold mb-0">{{course.title}}</h5>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium"
+                            [ngClass]="{'completed' : course.status === 'in progress'}"
+                            >{{course.status | titlecase }}</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            <img [src]="course.companyLogo" width="20" class="rounded-circle" alt="logoCompany">
+                            {{course.company}}
+                        </td>
+                        <td class="gray-color">{{course.expeditionDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>
