@@ -7,6 +7,7 @@ import {
     ApexFill,
     ChartComponent
 } from "ng-apexcharts";
+import { Tile } from '../../ui-kit/grid/grid.component';
 
 export type ChartOptions = {
     series: ApexNonAxisChartSeries;
@@ -26,6 +27,18 @@ export class ProfileComponent {
 
     @ViewChild("chart") chart: ChartComponent;
     public chartOptions: Partial<ChartOptions>;
+
+
+    isChecked = this.themeService.isDark();
+    mode = this.isChecked ? 'Dark' : 'Light';
+    expandedIndex = 0;
+    panelOpenState = false;
+    tiles: Tile[] = [
+        {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+        {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+        {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+        {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    ];
 
     constructor(
         public themeService: CustomizerSettingsService
@@ -59,6 +72,7 @@ export class ProfileComponent {
                 }
             }
         };
+        this.isChecked = this.themeService.isDark();
     }
     linkedIn = 'https://www.linkedin.com/in/engels-abdel-medina-colmenares/?locale=en_US';
     instagram = 'https://instagram.com/engelsabdel';
@@ -83,6 +97,9 @@ export class ProfileComponent {
     toggleRTLEnabledTheme() {
         this.themeService.toggleRTLEnabledTheme();
     }
-    expandedIndex = 0;
-    panelOpenState = false;
+    onChange() {
+        console.log(this.isChecked);
+        this.mode = this.isChecked ? 'Dark' : 'Light';
+        this.themeService.toggleTheme();
+      } 
 }

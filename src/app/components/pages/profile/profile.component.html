@@ -1,58 +1,86 @@
-
-<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0" class="mt-15">
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0"
+    fxLayoutGap.sm="0" fxLayoutGap.md="0" class="mt-15">
     <div class="flex-grow-1"></div>
     <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="40%" fxFlex.md="40%" class="col">
-        <div
-            class="profile-card-box border-radius bg-white box-shadow mb-25 mt-15"
+        <div class="profile-card-box border-radius bg-white box-shadow mb-25 mt-15"
             [class.component-dark-theme]="themeService.isDark()"
             [class.card-borderd-theme]="themeService.isCardBorder()"
             [class.card-border-radius]="themeService.isCardBorderRadius()"
-            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
-        >
-            <div class="bottom">
-                <div class="d-md-flex align-items-end justify-content-space-between">
-                    <div class="profile-box position-relative">
-                        <img src="assets/img/engels-crop.jpg" class="rounded-circle mb-15" alt="user">
-                        <h5 class="fw-semibold">{{name}}</h5>
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+            <div class="code-banner"></div>
+            <div class="profile-info">
+                <div class="profile-photo-wrapper">
+                    <img src="assets/img/engels-crop.jpg" class="rounded-circle" alt="user">
+                </div>
+                <div class="profile-details">
+                    <div class="profile-text">
+                        <h5 class="fw-semibold my-name">{{name}}</h5>
                         <span class="d-block gray-color">{{role}}</span>
                     </div>
                     <div class="socials">
-                        <a [href]="linkedIn" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-linkedin lh-1"></i></a>
-                        <a [href]="instagram" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-instagram lh-1"></i></a>
-                        <a [href]="twitter" target="_blank" class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i class="flaticon-twitter lh-1"></i></a>                        
+                        <a [href]="linkedIn" target="_blank"
+                            class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i
+                                class="flaticon-linkedin lh-1"></i></a>
+                        <a [href]="instagram" target="_blank"
+                            class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i
+                                class="flaticon-instagram lh-1"></i></a>
+                        <a [href]="twitter" target="_blank"
+                            class="ms-5 d-inline-block main-color w-35 h-35 rounded-circle lh-38 text-center bg-gray bg-main-hover-color"><i
+                                class="flaticon-twitter lh-1"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- <mat-card class="mb-25">
-                <mat-card-header class="mb-15">
-                    <mat-card-title-group>
-                        <mat-card-title class="fw-semibold mb-10">Card with media size</mat-card-title>
-                        <mat-card-subtitle>Large</mat-card-subtitle>
-                        <img mat-card-lg-image src="assets/img/engels-crop.jpg" alt="Engels">
-                    </mat-card-title-group>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>{{longText}}</p>
-                </mat-card-content>
-            </mat-card> -->
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </div>
 
     </div>
     <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col" class="mt-15">
 
         <app-stats></app-stats>
-        
+
     </div>
 </div>
-<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0"
+    fxLayoutGap.sm="0" fxLayoutGap.md="0">
+    <div class="flex-grow-1"></div>
+    <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="100%" fxFlex.md="100%" class="col">
+        <mat-card class="mb-25 personal-info-card tagus-card" [class.component-dark-theme]="themeService.isDark()">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">My Tech Stack</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <section class="logos-container gap-1">
+                    <div class="logos java-logo"></div>
+                    <div class="logos spring-logo"></div>
+                    <div class="logos springboot-logo"></div>
+                    <div class="logos kotlin-logo"></div>
+                    <div class="logos js-logo"></div>
+                    <div class="logos ts-logo"></div>
+                    <div class="logos nodejs-logo"></div>
+                    <div class="logos nestjs-logo"></div>
+                    <div class="logos php-logo"></div>
+                    <div class="logos laravel-logo"></div>
+                    <div class="logos git-logo"></div>
+                    <div class="logos docker-logo"></div>
+                    <div class="logos mysql-logo"></div>
+                    <div class="logos postgresql-logo"></div>
+                    <div class="logos mongodb-logo"></div>
+                    <div class="logos html-logo"></div>
+                    <div class="logos css3-logo"></div>
+                    <div class="logos angular-logo"></div>
+                    <div class="logos reactjs-logo"></div>
+                </section>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0"
+    fxLayoutGap.sm="0" fxLayoutGap.md="0">
     <div class="flex-grow-1"></div>
     <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col">
 
         <app-about-me></app-about-me>
 
-        
+
         <mat-card class="mb-25 tagus-card">
             <mat-card-header class="border-bottom">
                 <h5 class="mb-0">Experience</h5>
@@ -62,50 +90,143 @@
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                Freelance Full Stack Software Engineer
+                                Freelance Full Stack Software Engineer — Oct 2016 - Present (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Designed and implemented scalable backend and frontend solutions for clients across
+                                various industries, leveraging Java Spring Boot, Php, Node.js, Vuejs, Reactjs and
+                                Angular.</li>
+                            <li>Developed REST and GraphQL APIs that improved data retrieval speed.</li>
+                            <li>Integrated secure payment gateways and optimized database performance for high-traffic
+                                applications, reducing query response times.</li>
+                        </ul>
                     </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                Genium.io
+                                Backend Developer, Frasal — Jul 2023 - Jun 2025 · Montevideo, Uruguay (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Collaborated on multiple APIs for the "Banca Empresas" solution, a corporate banking
+                                application for Santander Bank's business clients.</li>
+                            <li>Upgraded APIs from Java 8/11 to Java 17 and migrated Spring Boot microservices from
+                                version 2.7.1 to 3.3.1.</li>
+                            <li>Contributed to the development of a data migration API, enabling seamless and secure
+                                data transfers.</li>
+                            <li>Played a key role in building the QA environment from scratch and developed best
+                                practice guidelines for E2E testing.</li>
+                            <li>Designed and deployed mock services for the QA environment, reducing testing time by
+                                40%.</li>
+                            <li>Contributed to CI/CD pipelines with GitHub Actions and automated deployments using
+                                ArgoCD.</li>
+                            <li>Developed a full-stack administrative application using Laravel 9 and Vue 3 for a
+                                Chilean services company.</li>
+                        </ul>
+                        <p class="gray-color"><small><strong>Technologies:</strong> Java 11/17, Spring Boot 2.7 → 3.3,
+                                Laravel 9, Vue 3, REST/SOAP APIs, Docker, SQL Server, Flyway, Jira, SonarQube, GitHub
+                                Actions, ArgoCD.</small></p>
                     </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                What About Money Back Guarantee?
+                                Full Stack Developer, Genium.io — Nov 2018 - May 2023 · California, US (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Veterinary System: Designed and implemented backend (Node.js/Nest.js, MongoDB) and
+                                frontend (React.js) for a veterinary management platform supporting 100+ clinics in
+                                North America.</li>
+                            <li>Live Streaming Application: Developed backend services and an administrative web
+                                interface for a live streaming platform.</li>
+                            <li>Web Application Security: Implemented a JavaScript-based anti-fraud solution to
+                                safeguard web applications from bot attacks.</li>
+                            <li>Radio Management Platform: Built an API and web frontend to manage radio stations.</li>
+                            <li>Leveraged Angular, Node.js, and GraphQL for API development.</li>
+                        </ul>
+                        <p class="gray-color"><small><strong>Technologies:</strong> Node.js, TypeScript, Angular 2+,
+                                ReactJs, Java Spring Boot, MongoDB, PostgreSQL.</small></p>
                     </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                How Long Does A Business Consulting Project Last?
+                                Frontend Developer, Unx Digital — Nov 2019 - May 2020 · Córdoba, Argentina (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Contributed to developing a frontend interface for a petroleum industry product, based
+                                on design mocks.</li>
+                            <li>Implemented responsive components using Angular 8, ensuring high fidelity to design
+                                specifications.</li>
+                            <li>Delivered a clean and maintainable codebase aligned with project requirements.</li>
+                        </ul>
+                        <p class="gray-color"><small><strong>Technologies:</strong> Node.js, TypeScript, Angular
+                                2+.</small></p>
                     </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                Do You Offer Volume or Loyalty Discounts?
+                                Frontend Developer, Fromandes — Sep 2018 - Apr 2019 · Providencia, Chile (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Developed the frontend for a pest control management system using Angular 6.</li>
+                            <li>Worked from wireframes to implement a responsive and user-friendly interface for web and
+                                mobile platforms.</li>
+                            <li>Delivered a frontend solution optimized for compilation as a mobile application.</li>
+                        </ul>
+                        <p class="gray-color"><small><strong>Technologies:</strong> Node.js, TypeScript, Angular
+                                2+.</small></p>
                     </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                In Which Countries Do You Provide Consulting Services?
+                                Software Developer, E-Saurio Solutions — Apr 2017 - Apr 2018 · Buenos Aires, Argentina
+                                (Remote)
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                        <ul>
+                            <li>Developed the administrative frontend for a skincare management system for Unilever's
+                                Ponds brand using AngularJS.</li>
+                            <li>Built and integrated backend modules and API development for personalized skincare
+                                plans.</li>
+                            <li>Collaborated on a solution extending the system to a mobile app and a Facebook chatbot.
+                            </li>
+                        </ul>
+                        <p class="gray-color"><small><strong>Technologies:</strong> Node.js, TypeScript, AngularJS, Java
+                                Spring Boot, PostgreSQL, TensorFlow.</small></p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Software Support Engineer, TechAID Solutions — Jun 2017 - Nov 2017 · Quito, Ecuador
+                                (Remote)
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li>Provided Level 1 support for Auth0, assisting clients with implementation and
+                                integration of various SDKs.</li>
+                            <li>Identified, documented, and escalated unresolved bugs to higher-level support teams.
+                            </li>
+                            <li>Used Zendesk to manage support tickets and deliver high-quality customer service.</li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Early Career in Software Development — Jun 2009 - Sep 2016
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul>
+                            <li>Gained extensive experience in backend and frontend development with Java (JSF, EJB,
+                                Struts), Visual Basic 6, Php, and more.</li>
+                            <li>Developed payroll systems and ERP integrations in manufacturing and finance industries.
+                            </li>
+                            <li>Worked in the financial, insurance, and banking sectors, including a project for BOD
+                                bank in Venezuela developing online banking modules (Java EE, JSF/PrimeFaces, JPA, EJB,
+                                SOAP).</li>
+                        </ul>
                     </mat-expansion-panel>
                 </mat-accordion>
             </mat-card-content>
@@ -119,12 +240,14 @@
     </div>
 </div>
 
-<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0" fxLayoutGap.sm="0" fxLayoutGap.md="0">
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutGap="25px" fxLayoutGap.xs="0"
+    fxLayoutGap.sm="0" fxLayoutGap.md="0">
     <div class="flex-grow-1"></div>
     <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="40%" fxFlex.md="40%" class="col">
 
         <app-habilities-report></app-habilities-report>
-        
+        <app-world-map-clients></app-world-map-clients>
+
     </div>
     <div fxFlex="45%" fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.lg="60%" fxFlex.md="60%" class="col">
 
@@ -132,3 +255,100 @@
 
     </div>
 </div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <span class="badge text-outline-tagus me-15">Tagus</span>
+                <span class="badge text-outline-primary">Primary</span>
+                <h5 class="mb-12 mt-20">Nesta Technologies</h5>
+                <p>When you enter into any new area of science, you almost always any new area of science find.</p>
+                <button mat-stroked-button class="tagus">Tagus</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card"
+            style="background-image: url(assets/img/cards/card2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+            <mat-card-content>
+                <span class="badge text-bg-tagus me-15">Tagus</span>
+                <span class="badge text-bg-primary">Primary</span>
+                <div style="height: 250px;"></div>
+                <h5 class="mb-12 mt-20 text-white">Nesta Technologies</h5>
+                <p class="text-white">When you enter into any new area of science, you almost always any new area of
+                    science find.</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <span class="badge text-bg-danger me-15">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+                <h5 class="mb-12 mt-20">Nesta Technologies</h5>
+                <p>When you enter into any new area of science, you almost always any new area of science find.</p>
+                <button mat-flat-button class="gray">Gray</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <span class="badge text-bg-tagus me-15">Tagus</span>
+                <span class="badge text-bg-primary">Primary</span>
+                <img src="assets/img/cards/card1.jpg" class="border-radius mt-15" alt="card">
+                <h5 class="mb-12 mt-15">Nesta Technologies</h5>
+                <p>When you enter into any new area of science, you almost always any new area of science find.</p>
+                <button mat-flat-button class="tagus">Tagus</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card"
+            style="background-image: url(assets/img/cards/card4.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+            <mat-card-content>
+                <span class="badge text-bg-danger me-15">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+                <div style="height: 200px;"></div>
+                <h5 class="mb-12 mt-20 text-white">Nesta Technologies</h5>
+                <p class="text-white">When you enter into any new area of science, you almost always any new area of
+                    science find.</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <span class="badge text-soft-danger me-15">Danger</span>
+                <span class="badge text-soft-warning">Warning</span>
+                <h5 class="mb-12 mt-20">Nesta Technologies</h5>
+                <p>When you enter into any new area of science, you almost always any new area of science find.</p>
+                <button mat-raised-button color="accent">Accent</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <span class="badge text-soft-tagus me-15">Tagus</span>
+                <span class="badge text-soft-primary">Primary</span>
+                <img src="assets/img/cards/card3.jpg" class="border-radius mt-15" alt="card">
+                <h5 class="mb-12 mt-15">Nesta Technologies</h5>
+                <p>When you enter into any new area of science, you almost always any new area of science find.</p>
+                <button mat-flat-button color="warn">Warn</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <h5 class="mb-12 mt-15">Settings</h5>
+                <mat-slide-toggle [(ngModel)]="isChecked" (change)="onChange()">Mode: {{mode}}</mat-slide-toggle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<mat-card class="mt-1 mb-25 tagus-card">
+
+
+    <mat-card-content>
+        <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+                [style.background]="tile.color">
+                {{tile.text}}
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>

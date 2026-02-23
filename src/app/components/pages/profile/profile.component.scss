@@ -1,96 +1,85 @@
 .profile-card-box {
-    .top {
-        padding: 25px 110px 45px 25px;
-        background-color: #EAEDFB;
+    overflow: hidden;
 
-        h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        img {
-            right: 0;
-            bottom: 0;
-            max-width: 135px;
-            position: absolute;
-        }
-        p {
-            font-size: 13.5px;
-        }
+    .code-banner {
+        height: 200px;
+        background-image: url('/assets/img/code-banner-bg.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        border-radius: 5px 5px 0 0;
     }
-    .bottom {
-        padding: 0 20px 25px 25px;
 
-        .profile-box {
-            margin-top: -20px;
+    .profile-info {
+        padding: 0 25px 15px 25px;
+        position: relative;
+
+        .profile-photo-wrapper {
+            margin-top: -55px;
+            margin-bottom: 10px;
 
             img {
-                width: 150px;
-                margin-bottom: 10px;
+                width: 110px;
+                height: 110px;
+                object-fit: cover;
                 border: 4px solid var(--whiteColor);
-            }
-            h5 {
-                font-size: 15px;
-                margin-bottom: 5px;
-            }
-            span {
-                font-size: 13.5px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             }
         }
-        .impression-box {
-            span {
-                font-size: 13px;
-                color: #00B69B;
-                margin: {
-                    bottom: 5px;
-                    top: -6px;
-                };
+
+        .profile-details {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .profile-text {
+                h5 {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    font-size: 13.5px;
+                }
             }
-            h5 {
-                font-size: 13px;
+
+            .socials {
+                margin-bottom: 5px;
             }
         }
     }
+
     &.component-dark-theme {
-        .top {
-            background-color: #1e2227;
+        .code-banner {
+            opacity: 0.85;
         }
-        .bottom {
-            .profile-box {    
+
+        .profile-info {
+            .profile-photo-wrapper {
                 img {
                     border-color: #000000;
                 }
             }
         }
+
         &.card-borderd-theme {
             box-shadow: var(--borderWhiteBoxShadow) !important;
         }
     }
+
     &.card-borderd-theme {
         box-shadow: var(--borderBoxShadow) !important;
     }
+
     &.card-border-radius {
         border-radius: 0 !important;
-
-        .border-top-radius {
-            border-radius: 0 !important;
-        }
     }
+
     &.component-rtl-enabled {
-        .top {
-            padding: {
-                left: 110px;
-                right: 25px;
-            };
-            img {
-                right: auto;
-                left: 0;
+        .profile-info {
+            .profile-details {
+                flex-direction: row-reverse;
             }
-        }
-        .bottom {
-            padding: {
-                left: 20px;
-                right: 25px;
-            };
         }
     }
 }
@@ -98,50 +87,28 @@
 @media only screen and (max-width : 767px) {
 
     .profile-card-box {
-        .top {
-            padding: 20px 20px 40px;
-    
-            h4 {
-                font-size: 14px;
-                margin-bottom: 8px;
-            }
-            img {
-                max-width: 100%;
-                position: relative;
-                margin-bottom: 15px;
-            }
+        .code-banner {
+            height: 120px;
         }
-        .bottom {
-            padding: 0 20px 20px 20px;
-    
-            .profile-box {
-                margin-bottom: 10px;
-            }
-            .impression-box {
-                text-align: left !important;
 
-                span {
-                    margin: {
-                        bottom: 5px;
-                        top: 5px;
-                    };
+        .profile-info {
+            padding: 0 15px 20px 15px;
+
+            .profile-photo-wrapper {
+                margin-top: -50px;
+
+                img {
+                    width: 100px;
+                    height: 100px;
                 }
             }
-        }
-        &.component-rtl-enabled {
-            .top {
-                padding: {
-                    left: 20px;
-                    right: 20px;
-                };
-            }
-            .bottom {
-                padding: {
-                    left: 20px;
-                    right: 20px;
-                };
-                .impression-box {
-                    text-align: right !important;
+
+            .profile-details {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .socials {
+                    margin-top: 10px;
                 }
             }
         }
@@ -152,55 +119,142 @@
 @media only screen and (min-width: 1600px) {
 
     .profile-card-box {
-        .top {
-            padding: 25px 165px 45px 25px;
-    
-            h4 {
-                font-size: 20px;
-            }
-            p {
-                font-size: var(--fontSize);
-            }
-            img {
-                max-width: 100%;
-            }
-        }
-        .bottom {
-            padding: 0 25px 25px 25px;
-    
-            .profile-box {
-                margin-top: -20px;
-    
-                h5 {
-                    font-size: 17px;
-                }
-                span {
-                    font-size: 14px;
+        .profile-info {
+            .profile-photo-wrapper {
+                img {
+                    width: 140px;
+                    height: 140px;
                 }
             }
-            .impression-box {
-                span {
-                    font-size: 13px;
+
+            .profile-details {
+                .profile-text {
+                    h5 {
+                        font-size: 17px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
                 }
-                h5 {
-                    font-size: 14px;
-                }
-            }
-        }
-        &.component-rtl-enabled {
-            .top {
-                padding: {
-                    left: 165px;
-                    right: 25px;
-                };
-            }
-            .bottom {
-                padding: {
-                    left: 25px;
-                    right: 25px;
-                };
             }
         }
     }
 
+}
+
+#main-graph {
+    width: 1200px;
+    height: 800px;
+}
+
+.my-name {
+    font-size: 3rem !important;
+    line-height: 1;
+}
+
+.logos {
+    display: flex;
+    width: 50%;
+    min-width: 25px;
+    height: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
+}
+
+.logos-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.mat-mdc-slide-toggle .mdc-switch {
+    transform: scale(1.6) translateX(-10px); //adjust the pixels to your scale size i
+}
+
+.html-logo {
+    background-image: url('/assets/img/stack/html-5.svg');
+}
+
+.css3-logo {
+    background-image: url('/assets/img/stack/css-3.svg');
+}
+
+.angular-logo {
+    background-image: url('/assets/img/stack/angular.svg');
+}
+
+.reactjs-logo {
+    background-image: url('/assets/img/stack/reactjs.svg');
+}
+
+.ts-logo {
+    background-image: url('/assets/img/stack/typescript.svg');
+}
+
+.js-logo {
+    background-image: url('/assets/img/stack/javascript.svg');
+}
+
+.java-logo {
+    background-image: url('/assets/img/stack/java.svg');
+}
+
+.php-logo {
+    background-image: url('/assets/img/stack/php.svg');
+}
+
+.laravel-logo {
+    background-image: url('/assets/img/stack/laravel.svg');
+}
+
+.nodejs-logo {
+    background-image: url('/assets/img/stack/nodejs.svg');
+}
+
+.spring-logo {
+    background-image: url('/assets/img/stack/spring.svg');
+}
+
+.springboot-logo {
+    background-image: url('/assets/img/stack/springboot.svg');
+}
+
+.kotlin-logo {
+    background-image: url('/assets/img/stack/kotlin.svg');
+}
+
+.mongodb-logo {
+    background-image: url('/assets/img/stack/mongodb.svg');
+}
+
+.mysql-logo {
+    background-image: url('/assets/img/stack/mysql.svg');
+}
+
+.postgresql-logo {
+    background-image: url('/assets/img/stack/postgresql.svg');
+}
+
+.nestjs-logo {
+    background-image: url('/assets/img/stack/nestjs.svg');
+}
+
+.git-logo {
+    background-image: url('/assets/img/stack/git.svg');
+}
+
+.docker-logo {
+    background-image: url('/assets/img/stack/docker.svg');
 }

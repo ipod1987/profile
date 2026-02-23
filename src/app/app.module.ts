@@ -423,7 +423,8 @@ import { HabilitiesReportComponent } from './components/pages/profile/habilities
 import { HabilitiesSessionsComponent } from './components/pages/profile/ar-sessions/ar-sessions.component';
 import { AboutMeComponent } from './components/pages/profile/about-me/about-me.component';
 import { CourseExperienceComponent } from './components/pages/profile/course-experience/course-experience.component';
-
+import { WorldMapClientsEchartComponent } from './components/pages/profile/world-map-echart/world-map-echart.component';
+import { HighchartsChartModule } from 'highcharts-angular';  
 @NgModule({
     declarations: [
         AppComponent,
@@ -792,6 +793,7 @@ import { CourseExperienceComponent } from './components/pages/profile/course-exp
         HabilitiesSessionsComponent,
         AboutMeComponent,
         CourseExperienceComponent,
+        WorldMapClientsEchartComponent,
     ],
     imports: [
         BrowserModule,
@@ -852,7 +854,8 @@ import { CourseExperienceComponent } from './components/pages/profile/course-exp
         NgxMatTimepickerModule,
         QuillModule.forRoot(),
         NgxDropzoneModule,
-        ColorPickerModule
+        ColorPickerModule,
+        HighchartsChartModule,
     ],
     providers: [
         DatePipe
